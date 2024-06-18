@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# STL (Stereo Lithography) Viewer :mag_right:
+## Description
+* Following demo is created using **[ThreeJS](https://threejs.org/)** (3D Javascript Library). :heart: and ReactJS :fire:
+* [STL](https://en.wikipedia.org/wiki/STL_(file_format)) is a file format commonly used for 3D printing and computer-aided design (CAD)
+* Refer **Output.png** file to see output of demo.
+#### Created by [Rushikesh Vinod Ghatage](https://www.linkedin.com/in/rushikesh-ghatage-477489222/) :smiley:
+## Setup
+#### Download [Node.js](https://nodejs.org/en/download/).
+#### Run following commands:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* To install dependencies (only the first time)
+  ``` bash
+  npm install
+  ```
+* To run the local server at localhost:8080
+  ``` bash
+  npm start
+  ```
+* To build for production in the directory
+  ``` bash
+  npm run build
+  ```
+## Instructions
+* Choose **"Femur Centre"** radio button, One Landmark will be created. You can reposition your Landmark.
+* Choose **"Hip Centre"** radio button, Another Landmark will be created. You can reposition your Landmark.
+* Click on **"Update"** button, One Line will be create between thode two Landmark.
+     And at the bottom of line, Two planes will create which will be perpendicular to its Line.
+* Click on **"Show/Hide"** button, Lower part of bone from the last plane will be clipped.

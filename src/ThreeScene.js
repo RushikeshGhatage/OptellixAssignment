@@ -116,7 +116,7 @@ class CanvasHome extends Component {
     window.addEventListener("resize", this.resizeWindow, false);
 
     //Clear color
-    this.renderer.setClearColor("lightgrey");
+    this.renderer.setClearColor("#555c57");
   };
 
   //Accepts keyboard input
@@ -485,7 +485,7 @@ class CanvasHome extends Component {
         {/* Menu */}
         <div className="leftDiv">
           {/* Header */}
-          <h1 id="mainlabel">STL File Viewer</h1>
+          <h1 id="mainlabel">Knee Preop Planning</h1>
 
           {/* Radio Buttons */}
           <div className="radioOpt">
