@@ -26,7 +26,8 @@ class CanvasHome extends Component {
     this.frameId = null;
 
     //Variables
-    this.model = null;
+    this.femureModel = null;
+    this.tibiaModel = null;
     this.landmark_1 = null;
     this.landmark_2 = null;
     this.points = [];
@@ -147,7 +148,7 @@ class CanvasHome extends Component {
       0.1,
       1000
     );
-    this.camera.position.z = 200;
+    this.camera.position.z = 350;
     this.camera.lookAt(this.scene.position);
 
     orbitControls = new OrbitControls(this.camera, this.renderer.domElement);
@@ -175,7 +176,7 @@ class CanvasHome extends Component {
     const loader = new STLLoader();
 
     //Code
-    this.model = loader.load("./Right_Femur.stl", (geometry) => {
+    this.femureModel = loader.load("./Right_Femur.stl", (geometry) => {
       const material = new THREE.MeshPhongMaterial({
         color: 0xff5533,
         specular: 0x111111,
@@ -191,6 +192,28 @@ class CanvasHome extends Component {
       mesh.receiveShadow = true;
 
       mesh.name = "Right_Femur_Bone";
+
+      objects.push(mesh);
+
+      this.scene.add(mesh);
+    });
+
+    this.tibiaModel = loader.load("./Right_Tibia.stl", (geometry) => {
+      const material = new THREE.MeshPhongMaterial({
+        color: 0xff5533,
+        specular: 0x111111,
+        shininess: 200,
+      });
+      const mesh = new THREE.Mesh(geometry, material);
+
+      mesh.position.set(23, 225, 30);
+      mesh.rotation.set(Math.PI / 2, 0, 0);
+      mesh.scale.set(0.25, 0.25, 0.25);
+
+      mesh.castShadow = true;
+      mesh.receiveShadow = true;
+
+      mesh.name = "Right_Tibia_Bone";
 
       objects.push(mesh);
 
@@ -525,6 +548,166 @@ class CanvasHome extends Component {
             {/* Label */}
             <label>
               <b>Hip Centre</b>
+            </label>
+            <br></br>
+          </div>
+
+          <div className="radioOpt">
+            <input
+              type="radio"
+              id="femurProximalCanal_id"
+              name="fav_language"
+              className="femurProximalCanal"
+              value="hip"
+              style={{ height: "14px", width: "14px", cursor: "pointer" }}
+              onClick={() => {
+                // this.handleHipCentre();
+              }}
+            />
+
+            {/* Label */}
+            <label>
+              <b>Femur Proximal Canal</b>
+            </label>
+            <br></br>
+          </div>
+
+          <div className="radioOpt">
+            <input
+              type="radio"
+              id="femurDistalCanal_id"
+              name="fav_language"
+              className="femurDistalCanal"
+              value="hip"
+              style={{ height: "14px", width: "14px", cursor: "pointer" }}
+              onClick={() => {
+                // this.handleHipCentre();
+              }}
+            />
+
+            {/* Label */}
+            <label>
+              <b>Femur Distal Canal</b>
+            </label>
+            <br></br>
+          </div>
+
+          <div className="radioOpt">
+            <input
+              type="radio"
+              id="medialEpicondyle_id"
+              name="fav_language"
+              className="medialEpicondyle"
+              value="hip"
+              style={{ height: "14px", width: "14px", cursor: "pointer" }}
+              onClick={() => {
+                // this.handleHipCentre();
+              }}
+            />
+
+            {/* Label */}
+            <label>
+              <b>Medial Epicondyle</b>
+            </label>
+            <br></br>
+          </div>
+
+          <div className="radioOpt">
+            <input
+              type="radio"
+              id="lateralEpicondyle_id"
+              name="fav_language"
+              className="lateralEpicondyle"
+              value="hip"
+              style={{ height: "14px", width: "14px", cursor: "pointer" }}
+              onClick={() => {
+                // this.handleHipCentre();
+              }}
+            />
+
+            {/* Label */}
+            <label>
+              <b>Lateral Epicondyle</b>
+            </label>
+            <br></br>
+          </div>
+
+          <div className="radioOpt">
+            <input
+              type="radio"
+              id="distalMedialPt_id"
+              name="fav_language"
+              className="distalMedialPt"
+              value="hip"
+              style={{ height: "14px", width: "14px", cursor: "pointer" }}
+              onClick={() => {
+                // this.handleHipCentre();
+              }}
+            />
+
+            {/* Label */}
+            <label>
+              <b>Distal Medial Pt</b>
+            </label>
+            <br></br>
+          </div>
+
+          <div className="radioOpt">
+            <input
+              type="radio"
+              id="distalLateralPt_id"
+              name="fav_language"
+              className="distalLateralPt"
+              value="hip"
+              style={{ height: "14px", width: "14px", cursor: "pointer" }}
+              onClick={() => {
+                // this.handleHipCentre();
+              }}
+            />
+
+            {/* Label */}
+            <label>
+              <b>Distal Lateral Pt</b>
+            </label>
+            <br></br>
+          </div>
+
+          <div className="radioOpt">
+            <input
+              type="radio"
+              id="posteriorMedialPt_id"
+              name="fav_language"
+              className="posteriorMedialPt"
+              value="hip"
+              style={{ height: "14px", width: "14px", cursor: "pointer" }}
+              onClick={() => {
+                // this.handleHipCentre();
+              }}
+            />
+
+            {/* Label */}
+            <label>
+              <b>Posterior Medial Pt</b>
+            </label>
+            <br></br>
+          </div>
+
+          <div className="radioOpt">
+            <input
+              type="radio"
+              id="posteriorLateralPt_id"
+              name="fav_language"
+              className="posteriorLateralPt"
+              value="hip"
+              style={{ height: "14px", width: "14px", cursor: "pointer" }}
+              onClick={() => {
+                // this.handleHipCentre();
+              }}
+            />
+
+            {/* Label */}
+            <label>
+              <b>Posterior Lateral Pt</b>
             </label>
             <br></br>
           </div>

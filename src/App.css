@@ -39,7 +39,15 @@ h1 {
 }
 
 .femCentre,
-.hipCentre {
+.hipCentre,
+.femurProximalCanal,
+.femurDistalCanal,
+.medialEpicondyle,
+.lateralEpicondyle,
+.distalMedialPt,
+.distalLateralPt,
+.posteriorMedialPt,
+.posteriorLateralPt {
   accent-color: black;
 }
 
@@ -60,7 +68,7 @@ canvas {
 }
 
 .leftDiv {
-  height: 25vh;
+  height: auto;
   width: 22vw;
   left: 1%;
   top: 2%;
